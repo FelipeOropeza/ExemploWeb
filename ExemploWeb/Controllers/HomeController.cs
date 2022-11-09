@@ -29,5 +29,10 @@ namespace ExemploWeb.Controllers
             }
             return View(usuario);
         }
+
+        public ActionResult Resultado(Usuario usuario)
+        {
+            return View(usuario);
+        }
     }
 }
