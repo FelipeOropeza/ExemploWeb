@@ -22,7 +22,7 @@ namespace ExemploWeb.Models
         public string Idade { get; set; }
 
         [Display(Name = "Email profissonal")]
-        [RegularExpression("@\"\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*", ErrorMessage = "Email inválido")]
+        [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Email inválido")]
         public string Email { get; set; }
 
         [Display(Name = "Crie seu login")]
