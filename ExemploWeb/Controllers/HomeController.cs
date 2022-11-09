@@ -9,6 +9,7 @@ namespace ExemploWeb.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Usuario
         public ActionResult Index()
         {
             return View();
@@ -16,16 +17,16 @@ namespace ExemploWeb.Controllers
         
         public ActionResult Usuario()
         {
-            var usuario = new Usuario();
-            return View(usuario);
+            var usuario = new Usuario(); //Criando o objeto para a classe
+            return View(usuario); //Retorna para a view os dados da classe
         }
-
         [HttpPost]
+
         public ActionResult Usuario(Usuario usuario)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) //Validando o estado, ou seja, verificando a requisição
             {
-                return View("Resultado", usuario);
+                return View("Resultado", usuario); //Retorna para a view Resultado
             }
             return View(usuario);
         }
